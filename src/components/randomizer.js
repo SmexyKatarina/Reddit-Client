@@ -1,29 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/randomizer.css';
 
-const fetchSubreddit = async (subreddit) => {
-    const req = await fetch(`https://www.reddit.com/r/${subreddit}.json`);
-    const res = await req.json();
-    console.log(res);
-    return res;
-}
-
-const updateSubreddit = async () => {
-    const redditInformation = await fetchSubreddit("memes");
-    updateText(redditInformation);
-}
-
-const updateText = (text) => {
-    document.getElementById("subText").innerHTML = "Current subreddit: " + text;
-}
-
 const Randomizer = () => {
+    const [ getSubreddit, setSubreddit ] = useState(null);
+
+    const updateSubreddit = async () => {
+        const subreddits = ["memes", "pokemon", "Books", "lotr", "cosplay", "gaming"];
+        const rand = subreddits[Math.floor(Math.random() * subreddits.length)];
+        setSubreddit(rand);
+    }
+
     return (
         <> 
             <div className="randomize-container">
                 <button id="randomize" name="randomize" onClick={updateSubreddit}>Randomize Sub</button>
                 <div className="curr-sub">
-                    <p id="subText">Current subreddit: {/* PUT SUB HERE */}</p>
+                    <p id="subText">Current subreddit: <a id="subHolder" href={`https://www.reddit.com/r/${getSubreddit}`}>{getSubreddit}</a></p>
                 </div>
             </div>
         </>
