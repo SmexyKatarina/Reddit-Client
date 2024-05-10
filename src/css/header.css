@@ -1,0 +1,22 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    width: 100%;
+    background-color: rgb(3, 6, 58);
+}
+
+.header-title {
+    margin: 10px;
+    color: white;
+}
+
+.header-logo {
+    margin: 10px;
+    color: white;
+}
+
+
+
