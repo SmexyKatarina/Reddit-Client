@@ -35,3 +35,26 @@
     align-items: center;
     color: white;
 }
+
+#subHolder:link {
+    text-decoration: none;
+    color: grey;
+}
+
+#subHolder:visited {
+    color: darkcyan;
+    text-decoration: underline;
+}
+
+#subHolder:hover {
+    text-decoration: underline;
+    color: rgb(63, 61, 134);
+    transition: 0.1s;
+}
+
+#subHolder:active {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+
