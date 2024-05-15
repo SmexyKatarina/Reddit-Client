@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const init = {
-    currentSub: "memes",
+    currentSub: "home",
     posts: [],
     subreddits: [],
     isLoading: false,

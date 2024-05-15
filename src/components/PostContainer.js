@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-    fetchPosts
+    fetchPosts,
+    fetchSubreddits,
 } from '../store/redditSlice.js';
 
 import Post from './Post.js';
@@ -74,7 +75,7 @@ const PostContainer = () => {
                 <div className="posts">
                     {posts.map((post, index) => {
                         if (index <= 4) {
-                            return <Post postId={post.id} post={post} />
+                            return <Post key={index} post={post} />
                         }
                     })}
                 </div>
