@@ -7,6 +7,7 @@ import store from './store/store.js';
 import Header from './components/header.js';
 import Randomizer from './components/randomizer.js';
 import PostContainer from './components/PostContainer.js';
+import Statistics from './components/redditStatistics.js';
 
 
 function App() {
@@ -16,9 +17,12 @@ function App() {
         <Header />
 
         <Randomizer />
+
         <div className="content-container">
           <PostContainer />
+          <Statistics />
         </div>
+
       </div>
     </Provider>
   );

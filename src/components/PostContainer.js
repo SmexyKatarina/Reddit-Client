@@ -46,7 +46,7 @@ const PostContainer = () => {
 
     if (isLoading) {
         return (
-            <>
+            <div className="container">
                 <div className="post-container">
                     <div className="empty-post">Loading...</div>
                     <div className="empty-post">Loading...</div>
@@ -62,14 +62,14 @@ const PostContainer = () => {
                     </div>
                     <button className="page-button" onClick={updatePage(true)}>{">"}</button>
                 </div>
-            </>
+            </div>
         )
     }
 
     let count = 0;
 
     return (
-        <>
+        <div className="container">
             <div className="post-container">
                 <div className="posts">
                     {posts.map((post, index) => {
@@ -86,7 +86,7 @@ const PostContainer = () => {
                 </div>
                 <button className="page-button" onClick={updatePage(true)}>{">"}</button>
             </div>
-        </>
+        </div>
     )
 }
 
