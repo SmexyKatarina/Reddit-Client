@@ -1,12 +1,12 @@
 .stats-container {
     background-color: rgb(4, 5, 53);
     color: white;
-    padding: 40px;
-    margin: 0px 30px;
+    padding: 0px;
+    margin: 0px px;
     width: 200px;
+    height: 440px;
     display: flex;
     flex-direction: column;
-    white-space: nowrap;
 }
 
 #stats-currSub {

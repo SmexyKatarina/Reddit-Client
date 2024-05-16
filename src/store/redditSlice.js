@@ -74,6 +74,6 @@ export const fetchSubreddits = () => async (dispatch) => {
         const res = await subs.json();
         dispatch(successGetSubreddits(res.data.children.map((sub) => sub.data)));
     } catch (err) {
-        dispatch(failedGetSubreddits);
+        dispatch(failedGetSubreddits());
     }
 }

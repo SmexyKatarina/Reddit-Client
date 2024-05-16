@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     fetchPosts,
-    fetchSubreddits,
 } from '../store/redditSlice.js';
 
 import Post from './Post.js';
@@ -32,7 +31,7 @@ const PostContainer = () => {
 
     useEffect(() => {
         dispatch(fetchPosts(currentSub));
-    }, [currentSub, dispatch]);
+    }, [currentSub]);
 
     if (hasError) {
         return (

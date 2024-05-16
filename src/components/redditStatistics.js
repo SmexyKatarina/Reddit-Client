@@ -6,15 +6,32 @@ import { fetchSubreddits } from '../store/redditSlice';
 const Statistics = () => {
 
     const dispatch = useDispatch();
-    
-    const subs = useSelector((state) => state.reddit.subreddits);
-    const curSub = useSelector((state) => state.reddit.currentSub);
-
-    const subreddit = subs.filter(x => x["display_name"].toLowerCase() === curSub)[0];
 
     useEffect(() => {
         dispatch(fetchSubreddits());
-    }, []);
+    }, [dispatch]);
+        
+    const slice = useSelector((state) => state.reddit);
+
+    const { currentSub, isLoading, hasError } = slice;
+
+    const subreddit = slice.subreddits.filter(x => x["display_name"].toLowerCase() === currentSub)[0];
+    
+    if (isLoading || !subreddit) {
+        return (
+            <div className="stats-container">
+                <h1>Loading...</h1>
+            </div>
+        )
+    }
+
+    if (hasError) {
+        return ( 
+            <div className="stats-container">
+                <h1>Error</h1>
+            </div>
+        );
+    }
 
     return (
         <>
