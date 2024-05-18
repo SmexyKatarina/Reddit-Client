@@ -23,8 +23,16 @@
     margin: 15px;
 }
 
+.footer-project-github a {
+    transition: all 0.2s;
+}
+
+.footer-project-name a {
+    transition: all 0.2s;
+}
+
 .footer-project-github a:link {
-    text-decoration: none;
+    text-decoration: underline-dotted;
     color: rgb(100, 100, 100);
 }
 
@@ -37,5 +45,22 @@
 }
 
 .footer-project-github a:active {
+    color: rgb(100, 150, 100);
+}
+
+.footer-project-name a:link {
+    text-decoration: underline dotted;
+    color: rgb(100, 100, 100)
+}
+
+.footer-project-name a:visited {
+    color: rgb(100, 100, 100);
+}
+
+.footer-project-name a:hover {
+    color: rgb(200, 200, 200);
+}
+
+.footer-project-name a:active {
     color: rgb(100, 150, 100);
 }

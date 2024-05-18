@@ -9,7 +9,7 @@ const Post = (props) => {
         <>
             <div className="container">
                 <h1 className="post-title"><a target="_blank" rel="noreferrer" href={`https://www.reddit.com${post.permalink}`}>{post.title}</a></h1>
-                <p className="post-author"><a target="_blank" rel="noreferrer" href={`https://www.reddit.com/user/${post.author}`}>{post.author} <span className="strikethrough">---</span> {new Date(post.created * 1000).toDateString()}</a></p>
+                <p className="post-author"><a target="_blank" rel="noreferrer" href={`https://www.reddit.com/user/${post.author}`}>{post.author}</a> <span className="strikethrough">---</span> {new Date(post.created * 1000).toDateString()}</p>
             </div>
         </>
     );
