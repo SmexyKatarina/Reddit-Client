@@ -8,6 +8,7 @@
     justify-content: center;
     align-content: center;
     justify-items: center;
+    box-shadow: 5px 5px 25px 5px black;
 }
 
 .page-chooser {
@@ -29,6 +30,7 @@
     width: 40px;
     height: 40px;
     margin: 20px;
+    box-shadow: 10px 5px 15px 2px black;
 }
 
 .page-backing {
