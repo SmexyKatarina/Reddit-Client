@@ -26,13 +26,11 @@ const Statistics = () => {
         );
     }
 
-    const postDate = new Date(subreddit.created);
-
     return (
         <>
             <div className="stats-container">
                 <h3>Total Followers: <span id="stats-currSubs">{subreddit.subscribers}</span></h3>
-                <h5>Created at: <span id="stats-date-created">{postDate.toDateString()}</span></h5>
+                <h5>Created at: <span id="stats-date-created">{new Date(subreddit.created * 1000).toDateString()}</span></h5>
             </div>
         </>
     )
