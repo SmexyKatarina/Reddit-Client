@@ -1,23 +1,16 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector} from 'react-redux';
 import '../css/redditStatistics.css';
-import { fetchSubreddits } from '../store/redditSlice';
 
 const Statistics = () => {
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchSubreddits());
-    }, [dispatch]);
-        
     const slice = useSelector((state) => state.reddit);
 
-    const { currentSub, isLoading, hasError } = slice;
+    const { currentSub, isLoading, hasError, subreddits } = slice;
 
-    const subreddit = slice.subreddits.filter(x => x["display_name"].toLowerCase() === currentSub)[0];
-    
-    if (isLoading || !subreddit) {
+    const subreddit = subreddits.filter(x => x["display_name"].toLowerCase() === currentSub.toLowerCase())[0];
+
+    if (isLoading) {
         return (
             <div className="stats-container">
                 <h1>Loading...</h1>
@@ -25,10 +18,10 @@ const Statistics = () => {
         )
     }
 
-    if (hasError) {
+    if (hasError || !subreddit) {
         return ( 
             <div className="stats-container">
-                <h1>Error</h1>
+                <h4>Error loading statistics</h4>
             </div>
         );
     }

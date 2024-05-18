@@ -2,8 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const init = {
     currentSub: "home",
+    currentPage: 0,
     posts: [],
-    subreddits: [],
+    subreddits: [], 
     isLoading: false,
     hasError: false   
 };
@@ -41,6 +42,9 @@ const redditSlice = createSlice({
         setCurrentSubreddit(state, action) {
             state.currentSub = action.payload;
         },
+        setCurrentPage(state, action) {
+            state.currentPage = action.payload;
+        },
     },
 });
 
@@ -52,6 +56,7 @@ export const {
     successGetSubreddits,
     failedGetSubreddits,
     setCurrentSubreddit,
+    setCurrentPage,
 } = redditSlice.actions;
 
 export default redditSlice.reducer;

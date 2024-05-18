@@ -4,25 +4,19 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    justify-items: center;
     width: 100%;
-    height: 80px;
     color: white;
 }
 
 .post-title {
     font-size: 18px;
-    display: inline;
-    margin: 0 0 10px 0;
-    padding: 0;
 }
 
 .post-author {
     font-size: 12px;
     font-style: italic;
     color: darkgrey;
-    display: inline;
-    margin: 0;
-    padding: 0;
 }
 
 

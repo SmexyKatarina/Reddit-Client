@@ -8,8 +8,7 @@ import Header from './components/header.js';
 import Randomizer from './components/randomizer.js';
 import PostContainer from './components/PostContainer.js';
 import Statistics from './components/redditStatistics.js';
-import CommentsContainers from './components/CommentsContainer.js';
-
+import Footer from './components/footer.js';
 
 function App() {
 
@@ -24,6 +23,8 @@ function App() {
           <PostContainer />
           <Statistics />
         </div>
+
+        <Footer />
 
       </div>
     </Provider>

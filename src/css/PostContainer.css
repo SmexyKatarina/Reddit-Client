@@ -1,14 +1,8 @@
-.container {
-    margin: 0 auto;
-    padding: 0;
-}
-
 .post-container {
-    display: flex;
     background-color: rgb(4, 5, 53);
-    height: 404px;
-    width: 500px;
     padding: 20px;
+    margin: 0 20px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -19,7 +13,6 @@
 .page-chooser {
     display: flex;
     background-color: transparent;
-    height: 100px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -28,8 +21,8 @@
 }
 
 .page-button {
-    color: black;
-    background-color: rgb(169, 169, 169);
+    color: rgb(120, 120, 120);
+    background-color: rgb(33, 55, 75);
     border: 0;
     border-radius: 50%;
     font-size: 15px;
@@ -44,34 +37,28 @@
     justify-content: center;
     align-items: center;
     justify-items: center;
-    height: 10px;
     width: 40px;
     padding: 15px 15px;
 }
 
 .pages {
     color: white;
-    font-size: 18ypx;
+    font-size: 18px;
 }
 
 .page-button:hover {
-    background-color: rgb(90, 90, 90);
+    background-color: rgb(39, 39, 39);
     color: rgb(255, 255, 255);
     transition: 0.2s;
 }
 
 .empty-post {
     color: white;
-    height: 80px;
     width: 100%;
-    border-bottom: 1px solid darkgrey;
     display: flex;
+    padding: 20px;
     align-items: center;
     justify-items: center;
     align-content: center;
     justify-content: center;
-}
-
-.empty-post:last-child {
-    border: 0;
 }
