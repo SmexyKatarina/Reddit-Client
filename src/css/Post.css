@@ -9,6 +9,12 @@
     color: white;
 }
 
+.strikethrough {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    margin: 0px 5px;
+}
+
 .post-title {
     font-size: 18px;
 }

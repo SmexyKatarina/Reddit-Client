@@ -36,8 +36,11 @@ const PostContainer = () => {
     }
 
     useEffect(() => {
-        dispatch(fetchPosts(currentSub));
         dispatch(fetchSubreddits());
+    }, []);
+
+    useEffect(() => {
+        dispatch(fetchPosts(currentSub));
         dispatch(setCurrentPage(0));
     }, [currentSub, dispatch]);
 
